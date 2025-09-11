@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  background: #f4f7fa;
+  color: #333;
+}
+
+header.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, #009688, #004d40);
+  color: #fff;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+header .logo { font-size: 1.3rem; font-weight: bold; }
+.navlink { color: #fff; text-decoration: none; font-weight: 500; margin-left: 1rem; }
+
+main.panel { display: flex; flex-direction: column; gap: 1.5rem; padding: 1.5rem; }
+
+.card {
+  background: #fff;
+  padding: 1.2rem 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.card h2, .card h3 { margin: 0 0 1rem; color: #004d40; }
+
+.idbox {
+  font-size: 1.2rem;
+  font-weight: 600;
+  background: #e0f2f1;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.map { height: 320px; border-radius: 10px; margin-top: 0.5rem; }
+.status { font-weight: 600; margin: 0.5rem 0 1rem; }
+
+.btn {
+  border: none;
+  cursor: pointer;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn.small { font-size: 0.85rem; padding: 0.4rem 0.8rem; }
+.btn.big { font-size: 1.1rem; padding: 0.8rem 1.4rem; }
+.btn.danger { background: #e53935; color: #fff; }
+.btn.primary { background: #009688; color: #fff; }
+.btn-row { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 1rem; }
+
+#sosBtn {
+  width: 100%;
+  font-size: 1.3rem;
+  font-weight: bold;
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(229,57,53, 0.4); }
+  70% { box-shadow: 0 0 0 12px rgba(229,57,53, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(229,57,53, 0); }
+}
+
+/* Chatbox styling */
+.chatbox {
+  background: #fdfdfd;
+  border-radius: 10px;
+  padding: 1rem;
+  max-height: 260px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  box-shadow: inset 0 2px 8px rgba(0,0,0,0.05);
+}
+.chat-user, .chat-ai {
+  max-width: 80%;
+  padding: 0.7rem 1rem;
+  border-radius: 14px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.chat-user { align-self: flex-end; background: #009688; color: #fff; }
+.chat-ai { align-self: flex-start; background: #e8f5e9; color: #2e7d32; }
+.chat-time { font-size: 0.7rem; color: #666; margin-top: 0.3rem; display: block; }
+.typing { font-style: italic; color: #888; padding-left: 6px; }
+
+.chatform { display: flex; gap: 0.6rem; margin-top: 0.8rem; }
+.chatform input { flex: 1; padding: 0.6rem 0.8rem; border: 1px solid #ccc; border-radius: 8px; }
+
+.suggestions { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.6rem 0; }
+
+footer.footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+  color: #555;
+  background: #fafafa;
+  border-top: 1px solid #eee;
+}
+
+@media (min-width: 900px) {
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: start;
+  }
+}

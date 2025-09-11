@@ -1,0 +1,37 @@
+/* Shared styles for the frontend demo */
+:root{
+  --bg:#f4f6f9;
+  --card:#ffffff;
+  --accent:#1976d2;
+  --muted:#6b7280;
+  --danger:#e53935;
+  --success:#2e7d32;
+}
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial; background:var(--bg); margin:0; color:#111}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;background:linear-gradient(90deg,var(--accent),#115293);color:#fff}
+.topbar.small{padding:10px 16px;font-size:14px}
+.logo{font-weight:700}
+.navlink{color:rgba(255,255,255,0.9);text-decoration:none;margin-left:12px}
+.hero{padding:60px 16px;text-align:center}
+.hero h1{font-size:28px;margin:0 0 10px}
+.cta{margin-top:18px}
+.btn{background:var(--accent);color:#fff;border:none;padding:10px 16px;border-radius:8px;text-decoration:none;display:inline-block;margin:6px;cursor:pointer}
+.btn.ghost{background:transparent;border:1px solid rgba(0,0,0,0.08);color:#111}
+.panel{max-width:1100px;margin:20px auto;padding:0 16px}
+.card{background:var(--card);border-radius:10px;padding:16px;margin-bottom:16px;box-shadow:0 6px 18px rgba(16,24,40,0.06)}
+.two-col{display:flex;gap:12px}
+.map{height:320px;border-radius:8px;overflow:hidden;border:1px solid #e6eef8}
+.idbox{font-family:monospace;background:#f3f6fb;padding:10px;border-radius:8px;margin-bottom:8px}
+.btn-row{display:flex;gap:8px;margin-top:8px}
+.small{font-size:13px;color:var(--muted)}
+.footer{padding:14px;text-align:center;color:var(--muted);font-size:13px}
+.chatbox{background:#f9fafb;padding:10px;border-radius:8px;min-height:80px;max-height:140px;overflow:auto}
+.chatform{display:flex;gap:8px;margin-top:8px}
+.chatform input{flex:1;padding:8px;border-radius:8px;border:1px solid #e6eef8}
+.hidden{display:none}
+.log{background:#fff;padding:10px;border-radius:8px;max-height:220px;overflow:auto;border:1px solid #eef2ff}
+.log-item{background:#f1f8ff;padding:8px;margin-bottom:8px;border-radius:6px}
+.danger{background:var(--danger)}
+.big{padding:12px 18px}
+.small{font-size:13px}

@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Smart Tourist Safety Monitoring</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Extra professional styling */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #eef2f3, #dfe9f3);
+      color: #222;
+      line-height: 1.6;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #1d3557;
+      color: white;
+      padding: 0.8rem 2rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .logo {
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+    nav .navlink {
+      margin: 0 0.8rem;
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+    nav .navlink:hover {
+      color: #a8dadc;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 5rem 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #1d3557;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: #444;
+    }
+    .cta {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .btn {
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      border: none;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.25s ease-in-out;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+    }
+    .btn.primary {
+      background: #457b9d;
+      color: white;
+    }
+    .btn.ghost {
+      background: transparent;
+      border: 2px solid #457b9d;
+      color: #457b9d;
+    }
+    .btn.accent {
+      background: #e63946;
+      color: white;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+      gap: 1.5rem;
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .feature-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.25s;
+    }
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
+    .feature-card h3 {
+      margin-bottom: 0.8rem;
+      color: #1d3557;
+    }
+    .feature-card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .footer {
+      background: #1d3557;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">🌍 Smart Tourist Safety</div>
+    <nav>
+      <a href="tourist.html" class="navlink">Tourist App</a>
+      <a href="dashboard.html" class="navlink">Authority Dashboard</a>
+      <a href="#features" class="navlink">Features</a>
+      <a href="#contact" class="navlink">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Smart Tourist Safety Monitoring</h1>
+      <p>A modern prototype demonstrating <b>Digital ID</b>, <b>Geo-fencing</b>, <b>SOS Alerts</b>, and an <b>Authority Dashboard</b>.  
+         All features run directly in your browser with no backend required.</p>
+      <div class="cta">
+        <a href="tourist.html" class="btn primary">📱 Open Tourist App</a>
+        <a href="dashboard.html" class="btn ghost">🛡️ Open Authority Dashboard</a>
+        <a href="docs.html" class="btn ghost">📖 View Documentation</a>
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <div class="feature-card">
+        <h3>🆔 Digital Identity</h3>
+        <p>Blockchain-inspired digital IDs for safe authentication of tourists.</p>
+      </div>
+      <div class="feature-card">
+        <h3>🗺️ Geo-fencing</h3>
+        <p>Define safe zones and alert when tourists move outside permitted areas.</p>
+      </div>
+      <div class="feature-card">
+        <h3>🚨 SOS System</h3>
+        <p>One-tap SOS sends alerts to authorities with real-time location data.</p>
+      </div>
+      <div class="feature-card">
+        <h3>🤖 AI Chatbot</h3>
+        <p>Interactive help system to guide tourists with safety and directions.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="hero contact-section">
+  <h2>📬 Get in Touch</h2>
+  <p class="contact-intro">
+    Have questions, feedback, or collaboration ideas?  
+    The <b>SmartSaarthi Team</b> is always ready to connect with you.
+  </p>
+  
+  <div class="contact-grid">
+    <!-- Email -->
+    <div class="contact-card">
+      <h3>📧 Email Us</h3>
+      <p>Our inbox is always open. Reach out anytime!</p>
+      <a href="mailto:info@smartsaarthi.com" class="btn primary">Send Email</a>
+    </div>
+
+    <!-- Docs -->
+    <div class="contact-card">
+      <h3>📖 Documentation</h3>
+      <p>Explore our technical docs and learn more about the system.</p>
+      <a href="#docs" class="btn ghost">View Docs</a>
+    </div>
+
+    <!-- Social -->
+    <div class="contact-card">
+      <h3>🌐 Connect With Us</h3>
+      <p>Stay updated with the latest from <b>SmartSaarthi</b>.</p>
+      <div class="social-links">
+        <a href="https://twitter.com" target="_blank" class="social">🐦 Twitter</a>
+        <a href="https://linkedin.com" target="_blank" class="social">💼 LinkedIn</a>
+        <a href="https://github.com" target="_blank" class="social">💻 GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-footer">
+    <p>💡 Together, let’s make tourism safer with <b>AI, Geo-fencing, and Blockchain</b>.</p>
+  </div>
+</section>
+  </main>
+
+  <footer class="footer">
+    © SIH'25 • Team SmartSaarthi • Smart Tourist Monitoring Prototype • All data stays in your browser.
+  </footer>
+</body>
+</html>

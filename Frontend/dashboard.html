@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Authority Dashboard — Smart Tourist Safety</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      margin: 0;
+      background: #f5f7fb;
+      color: #333;
+    }
+    header.topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: linear-gradient(90deg, #0066cc, #004080);
+      color: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    header .logo {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    .navlink {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 1rem;
+      font-weight: 500;
+    }
+    main.panel {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 1.5rem;
+      padding: 1.5rem;
+    }
+    .card {
+      background: #fff;
+      padding: 1rem 1.2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .card h2 {
+      margin: 0 0 0.8rem;
+      font-size: 1.1rem;
+      color: #004080;
+    }
+    .map {
+      height: 400px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .btn-row {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+    .btn {
+      padding: 0.6rem 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.2s ease-in-out;
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+    .btn:nth-child(1) { background: #e53935; color: #fff; }
+    .btn:nth-child(2) { background: #ff9800; color: #fff; }
+    .btn:nth-child(3) { background: #0066cc; color: #fff; }
+    .btn.ghost { background: transparent; border: 1px solid #ccc; color: #333; }
+    #fenceForm {
+      margin-top: 1rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.6rem;
+    }
+    #fenceForm label {
+      grid-column: span 2;
+      font-size: 0.85rem;
+      color: #555;
+    }
+    #fenceForm input {
+      padding: 0.4rem 0.6rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    #log {
+      max-height: 350px;
+      overflow-y: auto;
+      font-size: 0.9rem;
+    }
+    .log-item {
+      border-bottom: 1px solid #eee;
+      padding: 0.6rem 0;
+    }
+    .log-item b {
+      color: #004080;
+    }
+    .tx {
+      font-size: 0.8rem;
+      color: #777;
+    }
+    footer.footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.8rem;
+      background: #fafafa;
+      border-top: 1px solid #eee;
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">🛡️ Authority Dashboard</div>
+    <nav><a href="index.html" class="navlink">Home</a></nav>
+  </header>
+
+  <main class="panel">
+    <section class="card">
+      <h2>Live Map & Geo-fence</h2>
+      <div id="map-auth" class="map"></div>
+    </section>
+
+    <section class="card">
+      <h2>Controls</h2>
+      <div class="btn-row">
+        <button id="simSOS" class="btn">🚨 Simulate SOS</button>
+        <button id="simCCTV" class="btn">📡 Simulate CCTV Alert</button>
+        <button id="setFence" class="btn">✏️ Edit Geo-fence</button>
+      </div>
+      <div id="fenceForm" class="hidden">
+        <label>Center Lat</label><input id="fenceLat" placeholder="12.9720">
+        <label>Center Lng</label><input id="fenceLng" placeholder="77.5940">
+        <label>Radius (m)</label><input id="fenceRad" placeholder="300">
+        <button id="updateFence" class="btn">Update Fence</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Incident Log (Blockchain Mock)</h2>
+      <div id="log"></div>
+      <button id="clearLog" class="btn ghost">Clear Log</button>
+    </section>
+  </main>
+
+  <footer class="footer">⚡ Demo — incidents and IDs are stored locally in your browser.</footer>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+  (function(){
+    function now(){ return new Date().toLocaleString(); }
+    const incidents = JSON.parse(localStorage.getItem('incidents')||'[]');
+    const logEl = document.getElementById('log');
+
+    function renderLog(){
+      logEl.innerHTML = incidents.map(i => `
+        <div class="log-item">
+          <b>${i.type}</b> — ${i.name||i.id||''}<br>
+          <span class="tx">${i.time} • tx: ${i.tx||''}</span>
+        </div>
+      `).join('');
+    }
+    renderLog();
+
+    // Map
+    const map = L.map('map-auth').setView([12.9720,77.5940], 14);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{}).addTo(map);
+    let fence = L.circle([12.9720,77.5940], { radius:300, color:'#0066cc', fillOpacity:0.06 }).addTo(map);
+
+    // Show incidents on map
+    incidents.forEach(i => {
+      if(i.loc) L.marker([i.loc.lat, i.loc.lng]).addTo(map).bindPopup(`${i.type} • ${i.name||i.id||''}`);
+    });
+
+    document.getElementById('simSOS').onclick = function(){
+      const t = incidents.length ? incidents[0] : { id:'UNK', name:'Alex Traveler', loc:{lat:12.9716,lng:77.5946} };
+      const inc = { type:'SIM_SOS', time: now(), id: t.id, name: t.name, loc: t.loc, tx: '0x'+Math.random().toString(16).slice(2,10) };
+      incidents.unshift(inc);
+      localStorage.setItem('incidents', JSON.stringify(incidents));
+      L.circle([inc.loc.lat, inc.loc.lng], { radius:25, color:'#e53935' }).addTo(map).bindPopup('🚨 SOS Alert').openPopup();
+      renderLog();
+    };
+
+    document.getElementById('simCCTV').onclick = function(){
+      const loc = { lat:12.9735, lng:77.5952 };
+      const inc = { type:'AI_CCTV', time: now(), name:'Area Scan', loc, tx: '0x'+Math.random().toString(16).slice(2,10) };
+      incidents.unshift(inc);
+      localStorage.setItem('incidents', JSON.stringify(incidents));
+      L.marker([loc.lat, loc.lng]).addTo(map).bindPopup('📡 AI CCTV Alert').openPopup();
+      renderLog();
+    };
+
+    document.getElementById('setFence').onclick = function(){
+      document.getElementById('fenceForm').classList.toggle('hidden');
+    };
+    document.getElementById('updateFence').onclick = function(){
+      const lat = parseFloat(document.getElementById('fenceLat').value) || 12.9720;
+      const lng = parseFloat(document.getElementById('fenceLng').value) || 77.5940;
+      const rad = parseFloat(document.getElementById('fenceRad').value) || 300;
+      map.removeLayer(fence);
+      fence = L.circle([lat,lng], { radius:rad, color:'#ff9800', fillOpacity:0.05 }).addTo(map);
+      alert('✅ Geo-fence updated.');
+    };
+
+    document.getElementById('clearLog').onclick = function(){
+      localStorage.removeItem('incidents');
+      incidents.length = 0;
+      renderLog();
+    };
+  })();
+  </script>
+</body>
+</html>

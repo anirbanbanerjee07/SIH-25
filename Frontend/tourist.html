@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Tourist App — Smart Tourist Safety</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <link rel="stylesheet" href="tourist.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">📱 Tourist App</div>
+    <nav><a href="index.html" class="navlink">Home</a></nav>
+  </header>
+
+  <main class="panel">
+    <section class="card">
+      <h2>Digital ID</h2>
+      <div id="digitalId" class="idbox">ID: <span id="did">--</span></div>
+      <button id="regenId" class="btn">🔄 Regenerate ID</button>
+    </section>
+
+    <section class="card two-col">
+      <div>
+        <h3>Location & Geo-fence</h3>
+        <div id="coords">Lat: --, Lng: --</div>
+        <div id="status" class="status">Status: --</div>
+        <div class="btn-row">
+          <button id="move-n" class="btn small">⬆ N</button>
+          <button id="move-s" class="btn small">⬇ S</button>
+          <button id="move-e" class="btn small">➡ E</button>
+          <button id="move-w" class="btn small">⬅ W</button>
+        </div>
+        <button id="sosBtn" class="btn danger big">🚨 SOS — Send Help</button>
+      </div>
+      <div>
+        <h3>Map</h3>
+        <div id="map" class="map"></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>🤖 SmartSaarthi Assistant</h3>
+      <div id="chatbox" class="chatbox"></div>
+
+      <!-- Quick Suggestions -->
+      <div class="suggestions">
+        <button class="btn small suggestion">📍 Nearest Hospital</button>
+        <button class="btn small suggestion">🚉 Nearest Station</button>
+        <button class="btn small suggestion">📞 Emergency Number</button>
+      </div>
+
+      <form id="chatForm" class="chatform">
+        <input id="chatInput" placeholder="Ask me anything (e.g., 'Safe hotels nearby?')" />
+        <button class="btn primary" type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">⚡ SmartSaarthi.</footer>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="tourist.js"></script>
+</body>
+</html>
