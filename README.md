@@ -59,5 +59,5 @@ npm start
 ```
 
 ## 👥 About Us — Team SmartSaarthi
-We are SmartSaarthi, a passionate team dedicated to building innovative, secure, and AI-driven solutions 
-for the tourism ecosystem. 🌍✨
+***We are SmartSaarthi, a passionate team dedicated to building innovative, secure, and AI-driven solutions 
+for the tourism ecosystem.*** 🌍✨
