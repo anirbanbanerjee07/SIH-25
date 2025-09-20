@@ -66,9 +66,12 @@ for the tourism ecosystem.*** 🌍✨
 seamless experiences through the power of AI, Blockchain, and IoT.*** 🛡️🤖🔗
 
 ### 🧑‍🤝‍🧑 Team Members & Roles
-- 👨‍💻 **Anirban** — *Full Stack Developer*  
-- 👩‍💻 **Sayori** — *UI/UX Designer & Frontend Developer*  
-- 🤖 **Rahul** — *AI/ML Engineer*  
-- 🔗 **Priya** — *Blockchain & Smart Contracts Developer*  
-- 🛠️ **Karan** — *Backend & Database Engineer*  
-- 📊 **Neha** — *IoT & Data Integration Specialist*
+- 👨‍💻 **Anirban** — *Full Stack Develope + Integration + Database Manage*  
+- 👩‍💻 **Gopal Gorai** — *Backend & Chatbot*  
+- 🤖 **Sagarika Mitra** — *Presentation*  
+- 🔗 **Surajit Mondal** — *Lead + Frontend + UI/UX*  
+- 🛠️ **Debajyoti Panda** — *Backend + BlockChain + Data Integration*  
+- 📊 **Susmita Paul** — *Frontend + Presentation*
+
+### 🌟 Our Mission  
+To be a *“Saarthi”* (guide/companion) for every tourist, ensuring **trust, safety, and seamless travel experiences**. 🛡️✈️
