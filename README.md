@@ -59,7 +59,7 @@ npm start
 ```
 
 ## 📸 ScreenShot Preview
-![App Screenshot](<img width="1913" height="1079" alt="sih1" src="https://github.com/user-attachments/assets/6b005994-df8d-46c5-97e1-9f249582cb05" />)
+![App Screenshot](https://github.com/user-attachments/assets/6b005994-df8d-46c5-97e1-9f249582cb05)
 
 
 ## 👥 About Us — Team SmartSaarthi
