@@ -65,4 +65,10 @@ for the tourism ecosystem.*** 🌍✨
 ***Our mission is to act as a “Saarthi” (guide/companion) for tourists worldwide — ensuring safety, trust, and 
 seamless experiences through the power of AI, Blockchain, and IoT.*** 🛡️🤖🔗
 
-**🧑‍🤝‍🧑 Team Members & Roles**
+### 🧑‍🤝‍🧑 Team Members & Roles
+- 👨‍💻 **Anirban** — *Full Stack Developer*  
+- 👩‍💻 **Sayori** — *UI/UX Designer & Frontend Developer*  
+- 🤖 **Rahul** — *AI/ML Engineer*  
+- 🔗 **Priya** — *Blockchain & Smart Contracts Developer*  
+- 🛠️ **Karan** — *Backend & Database Engineer*  
+- 📊 **Neha** — *IoT & Data Integration Specialist*
