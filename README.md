@@ -57,3 +57,5 @@ npm start
 - serve .
 - https://127.0.0.1:3000
 ```
+
+## 👥 About Us — Team SmartSaarthi
