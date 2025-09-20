@@ -79,3 +79,18 @@ seamless experiences through the power of AI, Blockchain, and IoT.*** 🛡️�
 
 ### 🌟 Our Mission  
 To be a ***“Saarthi”*** (guide/companion) for every tourist, ensuring **trust, safety, and seamless travel experiences**. 🛡️✈️
+
+---
+## 👨‍💻 Last Contribution
+
+The last update to this project was made by **@anirbanbanerjee07** on `September 20, 2025`.
+
+Feel free to check out the [commit history](./commits/main) for more details!
+---
+
+## ✨ Happy Coding!
+
+Thanks for checking out this project!  
+If you like it, give it a ⭐ and consider contributing.  
+
+Happy coding! 🚀👩‍💻👨‍💻💻
