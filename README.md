@@ -66,7 +66,7 @@ for the tourism ecosystem.*** 🌍✨
 seamless experiences through the power of AI, Blockchain, and IoT.*** 🛡️🤖🔗
 
 ### 🧑‍🤝‍🧑 Team Members & Roles
-- 👨‍💻 **Anirban**(https://github.com/anirbanbanerjee07) — *Full Stack Develope + Integration + Database Manage*  
+- 👨‍💻 [**Anirban**](https://github.com/anirbanbanerjee07) — *Full Stack Develope + Integration + Database Manage*  
 - 👩‍💻 **Gopal Gorai** — *Backend & Chatbot*  
 - 🤖 **Sagarika Mitra** — *Presentation*  
 - 🔗 **Surajit Mondal** — *Lead + Frontend + UI/UX*  
