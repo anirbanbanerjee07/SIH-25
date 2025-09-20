@@ -67,7 +67,7 @@ seamless experiences through the power of AI, Blockchain, and IoT.*** 🛡️�
 
 ### 🧑‍🤝‍🧑 Team Members & Roles
 - 👨‍💻 [**Anirban**](https://github.com/anirbanbanerjee07) — *Full Stack Develope + Integration + Database Manage*  
-- 👩‍💻 **Gopal Gorai** — *Backend & Chatbot*  
+- 👩‍💻 [**Gopal Gorai**](https://github.com/) — *Backend & Chatbot*  
 - 🤖 **Sagarika Mitra** — *Presentation*  
 - 🔗 **Surajit Mondal** — *Lead + Frontend + UI/UX*  
 - 🛠️ **Debajyoti Panda** — *Backend + BlockChain + Data Integration*  
