@@ -74,4 +74,4 @@ seamless experiences through the power of AI, Blockchain, and IoT.*** 🛡️�
 - 📊 **Susmita Paul** — *Frontend + Presentation*
 
 ### 🌟 Our Mission  
-To be a *“Saarthi”* (guide/companion) for every tourist, ensuring **trust, safety, and seamless travel experiences**. 🛡️✈️
+To be a ***“Saarthi”*** (guide/companion) for every tourist, ensuring **trust, safety, and seamless travel experiences**. 🛡️✈️
