@@ -21,3 +21,8 @@
 - 🗄️ Real-time Database with MongoDB / Firebase
 
 ## 🏗️ Tech Stack
+- Frontend: React Native / Flutter 🚀
+- Backend: Node.js + Express ⚡
+- Database: MongoDB / Firebase 📊
+- AI & ML: TensorFlow / OpenCV 🧠
+- Blockchain: Ethereum / Hyperledger 🔗
