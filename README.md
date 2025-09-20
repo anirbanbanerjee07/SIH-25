@@ -85,7 +85,7 @@ To be a ***“Saarthi”*** (guide/companion) for every tourist, ensuring **trus
 
 The last update to this project was made by **@anirbanbanerjee07** on `September 20, 2025`.
 
-Feel free to check out the [commit history](./commits/master) for more details!
+Feel free to check out the [commit history](./commits/main) for more details!
 ---
 
 ## ✨ Happy Coding!
