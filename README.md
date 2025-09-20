@@ -64,3 +64,5 @@ for the tourism ecosystem.*** 🌍✨
 
 ***Our mission is to act as a “Saarthi” (guide/companion) for tourists worldwide — ensuring safety, trust, and 
 seamless experiences through the power of AI, Blockchain, and IoT.*** 🛡️🤖🔗
+
+**🧑‍🤝‍🧑 Team Members & Roles**
