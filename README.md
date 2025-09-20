@@ -59,7 +59,7 @@ npm start
 ```
 
 ## 📸 ScreenShot Preview
-![Website](MainSIH/sih1.png)
+![Website](<img width="1913" height="1079" alt="sih1" src="https://github.com/user-attachments/assets/f33dfda1-192e-4c28-a652-380143779690"/>)
 
 ## 👥 About Us — Team SmartSaarthi
 ***We are SmartSaarthi, a passionate team dedicated to building innovative, secure, and AI-driven solutions 
