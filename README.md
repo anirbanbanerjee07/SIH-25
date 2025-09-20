@@ -52,8 +52,6 @@ npm start
 ```
 ### 5. Run this project as my method
 ```
-
-
 - New Terminal
 - cd Frontend
 - serve .
