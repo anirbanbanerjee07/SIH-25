@@ -14,8 +14,8 @@
 - 📜 Blockchain-verified Incident Logging for transparency
 
 ## Backend Services ⚙️
-🔗 Secure APIs for communication between app & dashboard
-📃 Blockchain Smart Contracts for:
-    ⚡ Instant Insurance Claims
-    🏛️ Embassy Notifications
-🗄️ Real-time Database with MongoDB / Firebase
+- 🔗 Secure APIs for communication between app & dashboard
+- 📃 Blockchain Smart Contracts for:
+  - ⚡ Instant Insurance Claims
+  - 🏛️ Embassy Notifications
+- 🗄️ Real-time Database with MongoDB / Firebase
