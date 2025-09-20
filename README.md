@@ -28,11 +28,11 @@
 - Blockchain: Ethereum / Hyperledger 🔗
 
 ## 🚀 Key Features at a Glance
-✅ Tourist safety with blockchain identity
-✅ Real-time geo-tracking & alerts
-✅ SOS emergency response
-✅ AI + IoT powered threat detection
-✅ Transparent and secure incident logs
+- ✅ Tourist safety with blockchain identity
+- ✅ Real-time geo-tracking & alerts
+- ✅ SOS emergency response
+- ✅ AI + IoT powered threat detection
+- ✅ Transparent and secure incident logs
 
 ### 1. Clone the repo
 ```
