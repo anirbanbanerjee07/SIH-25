@@ -74,7 +74,7 @@ seamless experiences through the power of AI, Blockchain, and IoT.*** 🛡️�
 - 👩‍💻 **Gopal Gorai** — *Backend & Chatbot*  
 - 🤖 **Sagarika Mitra** — *Presentation*  
 - 🔗 **Surajit Mondal** — *Lead + Frontend + UI/UX*  
-- 🛠️ **Debajyoti Panda** — *Backend + BlockChain + Data Integration*  
+- 🛠️ [**Debajyoti Panda**](https://github.com/Debajyoti27102084) — *Backend + BlockChain + Data Integration*  
 - 📊 **Susmita Paul** — *Frontend + Presentation*
 
 ### 🌟 Our Mission  
